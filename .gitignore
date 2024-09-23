@@ -1,0 +1,21 @@
+node_modules/
+.npmignore
+.env
+.vscode/
+.dist/
+
+# builds
+dom.js
+/dom.d.ts
+attribute.js
+attribute.d.ts
+element.js
+element.d.ts
+traverse.js
+traverse.d.ts
+html.js
+html.d.ts
+event.js
+event.d.ts
+class.js
+class.d.ts
