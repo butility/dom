@@ -1,6 +1,6 @@
 ---
 name: Improvement
-description: Suggest an improvement or enhancement
+about: Suggest an improvement or enhancement
 title: "[Improvement]"
 labels: enhancement
 assignees: ''
