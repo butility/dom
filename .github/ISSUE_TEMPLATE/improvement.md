@@ -1,3 +1,11 @@
+---
+name: Improvement
+description: Suggest an improvement or enhancement
+title: "[Improvement]"
+labels: enhancement
+assignees: ''
+---
+
 ### Improvement Issue Template
 
 **Title:** [Brief Description of Improvement]
