@@ -23,22 +23,22 @@ You can also include the form package via a CDN link in your HTML file:
 ```html
 <!-- To use all the functions and methods -->
 <script src="https://unpkg.com/@butility/dom@latest/dom.js" type="module"></script>
-<script src="https://cdn.jsdelivr.net/npm/@butility/dom@latest/dom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@butility/dom@latest/dom.js" type="module"></script>
 <!-- To use HTML utils -->
 <script src="https://unpkg.com/@butility/dom@latest/html.js" type="module"></script>
-<script src="https://cdn.jsdelivr.net/npm/@butility/dom@latest/html.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@butility/dom@latest/html.js" type="module"></script>
 <!-- To use Element utils -->
 <script src="https://unpkg.com/@butility/dom@latest/element.js" type="module"></script>
-<script src="https://cdn.jsdelivr.net/npm/@butility/dom@latest/element.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@butility/dom@latest/element.js" type="module"></script>
 <!-- To use Event utils -->
 <script src="https://unpkg.com/@butility/dom@latest/event.js" type="module"></script>
-<script src="https://cdn.jsdelivr.net/npm/@butility/dom@latest/event.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@butility/dom@latest/event.js" type="module"></script>
 <!-- To use Class utils -->
 <script src="https://unpkg.com/@butility/dom@latest/class.js" type="module"></script>
-<script src="https://cdn.jsdelivr.net/npm/@butility/dom@latest/class.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@butility/dom@latest/class.js" type="module"></script>
 <!-- To use Attribute utils -->
 <script src="https://unpkg.com/@butility/dom@latest/attribute.js" type="module"></script>
-<script src="https://cdn.jsdelivr.net/npm/@butility/dom@latest/attribute.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@butility/dom@latest/attribute.js" type="module"></script>
 ```
 
 ```js
