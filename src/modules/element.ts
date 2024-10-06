@@ -1,6 +1,12 @@
 export * from '@/core/element';
 
-import * as ElementModules from '@/core/element';
+import { create, getHTML, setHTML, setText } from '@/core/element';
 
-const Element = { ...ElementModules };
+const Element = {
+    create,
+    getHTML,
+    setHTML,
+    setText,
+};
+
 export default Element;

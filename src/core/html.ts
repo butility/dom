@@ -3,13 +3,73 @@ import { setAttributeOrChildren } from '@/utils/create-helper';
 
 // List of standard HTML tags
 const tags = [
-    'button', 'span', 'div', 'a', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li',
-    'img', 'input', 'form', 'table', 'tr', 'td', 'th', 'tbody', 'thead', 'tfoot', 'textarea',
-    'select', 'option', 'section', 'article', 'aside', 'header', 'footer', 'nav', 'main', 
-    'figure', 'figcaption', 'audio', 'video', 'source', 'canvas', 'details', 'summary', 
-    'datalist', 'fieldset', 'legend', 'label', 'meter', 'progress', 'time', 'output', 
-    'iframe', 'object', 'embed', 'picture', 'track', 'map', 'area', 'base', 'link', 'style', 
-    'script', 'title', 'meta', 'abbr', 'bdi', 'dialog', 'mark'
+    'button',
+    'span',
+    'div',
+    'a',
+    'p',
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    'ul',
+    'ol',
+    'li',
+    'img',
+    'input',
+    'form',
+    'table',
+    'tr',
+    'td',
+    'th',
+    'tbody',
+    'thead',
+    'tfoot',
+    'textarea',
+    'select',
+    'option',
+    'section',
+    'article',
+    'aside',
+    'header',
+    'footer',
+    'nav',
+    'main',
+    'figure',
+    'figcaption',
+    'audio',
+    'video',
+    'source',
+    'canvas',
+    'details',
+    'summary',
+    'datalist',
+    'fieldset',
+    'legend',
+    'label',
+    'meter',
+    'progress',
+    'time',
+    'output',
+    'iframe',
+    'object',
+    'embed',
+    'picture',
+    'track',
+    'map',
+    'area',
+    'base',
+    'link',
+    'style',
+    'script',
+    'title',
+    'meta',
+    'abbr',
+    'bdi',
+    'dialog',
+    'mark',
 ] as const;
 
 // Known HTML elements creation function
@@ -24,26 +84,37 @@ function createElementWithAttributes<K extends keyof HTMLElementTagNameMap>(
 
 // Create functions for all known tags
 const elements = Object.fromEntries(
-    tags.map(tag => [
+    tags.map((tag) => [
         tag,
-        (...attributesOrChildren: any[]) => createElementWithAttributes(tag, ...attributesOrChildren)
-    ])
-) as Record<typeof tags[number], (...attributesOrChildren: any[]) => HTMLElement>;
+        (...attributesOrChildren: any[]) =>
+            createElementWithAttributes(tag, ...attributesOrChildren),
+    ]),
+) as Record<
+    (typeof tags)[number],
+    (...attributesOrChildren: any[]) => HTMLElement
+>;
 
 // Function for custom or non-standard elements
-export function custom(name: string, ...attributesOrChildren: any[]): HTMLUnknownElement {
+export function custom(
+    name: string,
+    ...attributesOrChildren: any[]
+): HTMLUnknownElement {
     const element = createElement(name) as HTMLUnknownElement;
     setAttributeOrChildren(element, ...attributesOrChildren);
     return element;
 }
 
 // Special case for body and head
-export function body(...attributesOrChildren: ({} | HTMLElement)[]): HTMLBodyElement {
+export function body(
+    ...attributesOrChildren: ({} | HTMLElement)[]
+): HTMLBodyElement {
     setAttributeOrChildren(document.body, ...attributesOrChildren);
     return document.body as HTMLBodyElement;
 }
 
-export function head(...attributesOrChildren: ({} | HTMLElement)[]): HTMLHeadElement {
+export function head(
+    ...attributesOrChildren: ({} | HTMLElement)[]
+): HTMLHeadElement {
     setAttributeOrChildren(document.head, ...attributesOrChildren);
     return document.head as HTMLHeadElement;
 }
